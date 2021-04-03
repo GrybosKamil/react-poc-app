@@ -1,0 +1,20 @@
+.content-container {
+    background-color: lime;
+
+    text-align: center;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 1 0 auto;
+
+    .content-sidebar {
+        background-color: lightsteelblue;
+    }
+
+    .content-page {
+        background-color: lightgrey;
+    }
+}

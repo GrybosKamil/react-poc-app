@@ -1,6 +1,7 @@
 function Header() {
     return (
-        <div>
+        // <div className="header col-12">
+        <div className="header">
             Header
         </div>
     )
