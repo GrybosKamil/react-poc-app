@@ -2,15 +2,13 @@ import './Content.scss';
 
 function Content() {
     return (
-        <div className="content-container container">
-            <div className="row">
-                <div className="content-sidebar col-2">
-                    Sidebar
+        <div className="content-container">
+            <div className="content-sidebar">
+                Sidebar
                 </div>
-                <div className="content-page col-10">
-                    Content
+            <div className="content-page">
+                Content
                 </div>
-            </div>
         </div>
     )
 }
