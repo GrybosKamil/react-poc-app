@@ -1,0 +1,40 @@
+.page-content-container {
+    background-color: lime;
+
+    text-align: center;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    flex: 1 0 auto;
+
+    // .row {
+    // height: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // flex: 1 0 auto;
+    // width: 100%;
+
+    .page-sidebar {
+        // display: flex;
+        // flex: 1 0 100%;
+
+        // width: 100%;
+
+        background-color: lightsteelblue;
+        padding: 20px;
+    }
+
+    .page-content {
+        // display: flex;
+        // flex: 1 0 100%;
+
+        // width: 100%;
+
+        background-color: lightgrey;
+        padding: 20px;
+    }
+    // }
+}

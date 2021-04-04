@@ -1,0 +1,39 @@
+.sidebar-links-container {
+    .sidebar-links {
+        display: flex;
+        flex-direction: column;
+
+        list-style-type: none;
+        padding: 0;
+
+        .sidebar-link {
+            display: flex;
+
+            padding: 5px;
+            margin: 5px;
+            justify-content: center;
+
+            background-color: black;
+            color: white;
+            font-weight: bold;
+
+            margin-right: 20px;
+            margin-left: 0;
+
+            border: 0px solid;
+            border-radius: 15px 50px 30px;
+
+            &.active-link {
+                font-style: italic;
+
+                background-color: lightgrey;
+                color: green;
+
+                margin-right: 0;
+                margin-left: 20px;
+
+                border-radius: 15px 50px 30px;
+            }
+        }
+    }
+}
