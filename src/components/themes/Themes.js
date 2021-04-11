@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { Button } from "react-bootstrap";
+
 import ThemeContext from "../../context/theme/ThemeContext";
 import LanguageContext from "../../context/language/LanguageContext";
 
@@ -34,16 +36,17 @@ const Themes = () => {
             </div>
           )}
 
-          <button
+          <Button
             style={{
               backgroundColor: theme.colors.background,
               color: theme.colors.text,
               width: "100%",
             }}
+            active={theme.name === selectedTheme.name}
             onClick={() => setThemeWithName(theme.name)}
           >
             {selectedLanguage.themes.useTheme[theme.name]}
-          </button>
+          </Button>
         </span>
       ))}
     </div>

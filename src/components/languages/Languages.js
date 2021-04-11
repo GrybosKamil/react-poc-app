@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { Button } from "react-bootstrap";
+
 import ThemeContext from "../../context/theme/ThemeContext";
 import LanguageContext from "../../context/language/LanguageContext";
 
@@ -34,7 +36,7 @@ const Languages = () => {
             </div>
           )}
 
-          <button
+          <Button
             style={{
               backgroundColor: selectedTheme.colors.background,
               color: selectedTheme.colors.text,
@@ -43,7 +45,7 @@ const Languages = () => {
             onClick={() => setLanguageWithName(language.name)}
           >
             {language.setThisLanguage}
-          </button>
+          </Button>
         </span>
       ))}
     </div>
