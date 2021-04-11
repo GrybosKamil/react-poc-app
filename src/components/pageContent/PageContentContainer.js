@@ -7,6 +7,7 @@ import SettingsContainer from "../SettingsContainer";
 import Sidebar from "../Sidebar";
 
 import Themes from "../../components/themes/Themes";
+import Languages from "../../components/languages/Languages";
 
 import "./PageContentContainer.scss";
 
@@ -35,6 +36,9 @@ const PageContentContainer = (props) => {
           </Route>
           <Route exact path="/themes">
             <Themes />
+          </Route>
+          <Route exact path="/languages">
+            <Languages />
           </Route>
           <Route path="*">
             <div>404 Not Found</div>

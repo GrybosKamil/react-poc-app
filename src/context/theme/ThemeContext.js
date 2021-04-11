@@ -14,7 +14,7 @@ const ThemeContext = createContext({
 export default ThemeContext;
 
 export function ThemeProvider(props) {
-  // setToLocal("all-themes", allThemes);
+  setToLocal("all-themes", themesSchema.default.themes);
   const allThemes = getFromLocal("all-themes") || themesSchema.default.themes;
   setToLocal("all-themes", allThemes);
 
@@ -36,6 +36,7 @@ export function ThemeProvider(props) {
   // }, [themeName]);
 
   const setThemeWithName = (name) => {
+    console.log("Set theme: " + name);
     setToLocal("selected-theme-name", name);
     setSelectedThemeName(name);
   };

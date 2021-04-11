@@ -1,11 +1,13 @@
 export const setToLocal = (key, value) => {
+  if (value) {
     localStorage.setItem(key, JSON.stringify(value));
-}
+  }
+};
 
 export const getFromLocal = (key) => {
-    const value = localStorage.getItem(key);
+  const value = localStorage.getItem(key);
 
-    if (value) {
-        return JSON.parse(value)
-    }
-}
+  if (value) {
+    return JSON.parse(value);
+  }
+};

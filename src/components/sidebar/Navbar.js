@@ -2,32 +2,39 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 
 import ThemeContext from "../../context/theme/ThemeContext";
+import LanguageContext from "../../context/language/LanguageContext";
 
 import "./Navbar.scss";
 
 const Navbar = () => {
   const { selectedTheme } = useContext(ThemeContext);
+  const { selectedLanguage } = useContext(LanguageContext);
 
   const links = [
     {
       id: 1,
       path: "/",
-      text: "Index",
+      text: "index",
     },
     {
       id: 2,
       path: "/settings",
-      text: "Settings",
+      text: "settings",
     },
     {
       id: 3,
       path: "/themes",
-      text: "Themes",
+      text: "themes",
     },
     {
       id: 4,
+      path: "/languages",
+      text: "languages",
+    },
+    {
+      id: 404,
       path: "/404",
-      text: "Not Found",
+      text: "notFound",
     },
   ];
 
@@ -47,7 +54,7 @@ const Navbar = () => {
                   color: selectedTheme.colors.text,
                 }}
               >
-                {link.text}
+                {selectedLanguage.sidebar[link.text]}
               </NavLink>
             </li>
           );

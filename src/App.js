@@ -1,4 +1,5 @@
 import { ThemeProvider } from "./context/theme/ThemeContext";
+import { LanguageProvider } from "./context/language/LanguageContext";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -9,13 +10,15 @@ import "./App.scss";
 function App() {
   return (
     <ThemeProvider>
-      <div className="app-container">
-        <div className="site-content">
-          <Header />
-          <PageContentContainer />
-          <Footer />
+      <LanguageProvider>
+        <div className="app-container">
+          <div className="site-content">
+            <Header />
+            <PageContentContainer />
+            <Footer />
+          </div>
         </div>
-      </div>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }

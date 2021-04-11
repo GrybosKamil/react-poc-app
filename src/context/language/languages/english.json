@@ -1,0 +1,18 @@
+{
+    "id": "0",
+    "name": "english",
+    "language": "English",
+    "title": "Title",
+    "sidebar": {
+        "index": "Index",
+        "languages": "Languages",
+        "themes": "Themes",
+        "settings": "Settings",
+        "notFound": "Not Found"
+    },
+    "themes": {
+        "dark": "Dark",
+        "light": "Light",
+        "custom": "Custom"
+    }
+}

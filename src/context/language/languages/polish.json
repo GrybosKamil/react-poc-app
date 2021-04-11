@@ -1,0 +1,18 @@
+{
+    "id": "1",
+    "name": "polish",
+    "language": "Polski",
+    "title": "Tytuł",
+    "sidebar": {
+        "index": "Strona Główna",
+        "languages": "Języki",
+        "themes": "Tematy",
+        "settings": "Ustawienia",
+        "notFound": "Nie Znaleziono"
+    },
+    "themes": {
+        "dark": "Ciemny",
+        "light": "Jasny",
+        "custom": "Własny"
+    }
+}
