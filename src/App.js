@@ -1,4 +1,4 @@
-import { ThemeProvider } from "./themeContext/ThemeContext";
+import { ThemeProvider } from "./context/theme/ThemeContext";
 
 import Header from "./Header";
 import Footer from "./Footer";

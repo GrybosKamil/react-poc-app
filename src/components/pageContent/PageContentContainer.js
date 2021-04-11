@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import ThemeContext from "../../themeContext/ThemeContext";
+import ThemeContext from "../../context/theme/ThemeContext";
 
 import SettingsContainer from "../SettingsContainer";
 import Sidebar from "../Sidebar";

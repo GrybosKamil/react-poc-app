@@ -1,8 +1,8 @@
 import { useState, createContext } from "react";
 // import { useState, useEffect, useLayoutEffect, createContext } from "react";
-import { getFromLocal, setToLocal } from "../utils/storage";
+import { getFromLocal, setToLocal } from "../../utils/storage";
 
-import * as themesSchema from "./schema.json";
+import * as themesSchema from "./themes.json";
 
 const ThemeContext = createContext({
   allThemes: {},

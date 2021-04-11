@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 
-import ThemeContext from "../../themeContext/ThemeContext";
+import ThemeContext from "../../context/theme/ThemeContext";
 
 import "./Navbar.scss";
 
