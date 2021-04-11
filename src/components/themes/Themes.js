@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import ThemeContext from "../../context/theme/ThemeContext";
+import LanguageContext from "../../context/language/LanguageContext";
 
 const Themes = () => {
   const { allThemes, selectedTheme, setThemeWithName } = useContext(
     ThemeContext
   );
+  const { selectedLanguage } = useContext(LanguageContext);
 
   const themes = Object.keys(allThemes).map(
     (themeName) => allThemes[themeName]
@@ -21,7 +23,16 @@ const Themes = () => {
           key={theme.id}
           style={{ width: widthOfThemeButton, display: "inline-block" }}
         >
-          {theme.name === selectedTheme.name && <div>Active</div>}
+          {theme.name === selectedTheme.name && (
+            <div
+              style={{
+                border: "5px solid green",
+                borderRadius: "15px",
+              }}
+            >
+              Active
+            </div>
+          )}
 
           <button
             style={{
@@ -31,7 +42,7 @@ const Themes = () => {
             }}
             onClick={() => setThemeWithName(theme.name)}
           >
-            Set '{theme.name}' theme
+            {selectedLanguage.themes.useTheme[theme.name]}
           </button>
         </span>
       ))}

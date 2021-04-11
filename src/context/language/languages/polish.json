@@ -3,14 +3,20 @@
     "name": "polish",
     "language": "Polski",
     "title": "Tytuł",
+    "setThisLanguage": "Ustaw język 'Polski'",
     "sidebar": {
         "index": "Strona Główna",
         "languages": "Języki",
-        "themes": "Tematy",
+        "themes": "Motywy",
         "settings": "Ustawienia",
         "notFound": "Nie Znaleziono"
     },
     "themes": {
+        "useTheme": {
+            "dark": "Użyj 'Ciemny' motyw",
+            "light": "Użyj 'Jasny' motyw",
+            "custom": "Użyj 'Własny' motyw"
+        },
         "dark": "Ciemny",
         "light": "Jasny",
         "custom": "Własny"

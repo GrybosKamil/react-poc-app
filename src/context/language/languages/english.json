@@ -3,6 +3,7 @@
     "name": "english",
     "language": "English",
     "title": "Title",
+    "setThisLanguage": "Set 'English' language",
     "sidebar": {
         "index": "Index",
         "languages": "Languages",
@@ -11,6 +12,11 @@
         "notFound": "Not Found"
     },
     "themes": {
+        "useTheme": {
+            "dark": "Use 'Dark' theme",
+            "light": "Use 'Light' theme",
+            "custom": "Use 'Custom' theme"
+        },
         "dark": "Dark",
         "light": "Light",
         "custom": "Custom"
