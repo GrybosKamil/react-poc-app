@@ -46,8 +46,8 @@ const Navbar = () => {
             <li key={link.id}>
               <NavLink
                 to={link.path}
-                exact
-                className="sidebar-link"
+                exact={link.path === "/"}
+                className={"sidebar-link " + link.text}
                 activeClassName="active-link"
                 style={{
                   backgroundColor: selectedTheme.colors.background,

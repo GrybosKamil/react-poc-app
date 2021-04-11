@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import ThemeContext from "../../context/theme/ThemeContext";
 
@@ -8,6 +8,8 @@ import Sidebar from "../Sidebar";
 
 import Themes from "../../components/themes/Themes";
 import Languages from "../../components/languages/Languages";
+
+import NotFoundPage from "../../pages/errors/NotFoundPage";
 
 import "./PageContentContainer.scss";
 
@@ -41,7 +43,8 @@ const PageContentContainer = (props) => {
             <Languages />
           </Route>
           <Route path="*">
-            <div>404 Not Found</div>
+            <NotFoundPage />
+            <Redirect to="/404" />
           </Route>
         </Switch>
       </div>

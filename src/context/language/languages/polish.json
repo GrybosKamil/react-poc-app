@@ -20,5 +20,13 @@
         "dark": "Ciemny",
         "light": "Jasny",
         "custom": "Własny"
+    },
+    "pages": {
+        "errors": {
+            "notFound": {
+                "title": "404 Nie Znaleziono",
+                "message": "Strona nie znaleziona, proszę użyć odnośnika z panelu bocznego aby odwiedzić inną stronę"
+            }
+        }
     }
 }

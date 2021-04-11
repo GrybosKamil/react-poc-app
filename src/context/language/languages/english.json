@@ -20,5 +20,13 @@
         "dark": "Dark",
         "light": "Light",
         "custom": "Custom"
+    },
+    "pages": {
+        "errors": {
+            "notFound": {
+                "title": "404 Not Found",
+                "message": "Page not found, please use sidebar link to visit other page"
+            }
+        }
     }
 }
