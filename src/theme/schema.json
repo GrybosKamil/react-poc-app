@@ -1,9 +1,9 @@
 {
-    "defaultTheme": "light",
+    "defaultThemeName": "light",
     "themes": {
         "light": {
             "id": "T_001",
-            "name": "Light",
+            "name": "light",
             "colors": {
                 "background": "#FFFFFF",
                 "text": "#000000",
@@ -15,12 +15,12 @@
         },
         "dark": {
             "id": "T_002",
-            "name": "Dark",
+            "name": "dark",
             "colors": {
                 "background": "#000000",
                 "text": "#FFFFFF",
                 "buttons": {
-                    "background": "#AAAAAA",
+                    "background": "#777777",
                     "text": "#0000FF"
                 }
             }

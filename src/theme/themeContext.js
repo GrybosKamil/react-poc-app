@@ -1,46 +1,62 @@
-import React from 'react'
+// import { createContext, useEffect, useState } from "react";
+// import { useTheme } from "./useTheme";
 
-const themes = {
-  dark: {
-    backgroundColor: 'green',
-    color: 'white'
-  },
-  light: {
-    backgroundColor: 'red',
-    color: 'black'
-  }
-}
+// const themes = {
+//   dark: {
+//     backgroundColor: "green",
+//     color: "white",
+//   },
+//   light: {
+//     backgroundColor: "red",
+//     color: "black",
+//   },
+// };
 
-const initialState = {
-  dark: false,
-  theme: themes.light,
-  toggle: () => {}
-}
-const ThemeContext = React.createContext(initialState)
+// const initialState = {
+//   dark: false,
+//   theme: themes.light,
+// };
 
-function ThemeProvider({ children }) {
-  const [dark, setDark] = React.useState(false) // Default theme is light
+// const ThemeContext = createContext(initialState);
 
-  // On mount, read the preferred theme from the persistence
-  React.useEffect(() => {
-    const isDark = localStorage.getItem('dark') === 'true'
-    setDark(isDark)
-  }, [dark])
+// function ThemeProvider({ children }) {
+//   const {
+//     // theme,
+//     themeLoaded,
+//     setThemeWithId,
+//     setThemeWithName,
+//     getThemes,
+//   } = useTheme();
 
-  // To toggle between dark and light modes
-  const toggle = () => {
-    const isDark = !dark
-    localStorage.setItem('dark', JSON.stringify(isDark))
-    setDark(isDark)
-  }
+//   const [dark, setDark] = useState(false);
 
-  const theme = dark ? themes.dark : themes.light
+//   useEffect(() => {
+//     const isDark = localStorage.getItem("dark") === "true";
+//     setDark(isDark);
+//   }, [dark]);
 
-  return (
-    <ThemeContext.Provider value={{ theme, dark, toggle }}>
-      {children}
-    </ThemeContext.Provider>
-  )
-}
+//   const toggle = () => {
+//     console.log("toggle");
+//     const isDark = !dark;
+//     localStorage.setItem("dark", JSON.stringify(isDark));
+//     setDark(isDark);
+//   };
 
-export { ThemeProvider, ThemeContext }
+//   const selectTheme = (themeId) => {
+//     // localStorage.setItem('selected-theme', themeId);
+//     // setTheme(themes.themeId);
+//     console.log(themeId);
+//     setThemeWithId(themeId);
+//     // toggle();
+//   };
+
+//   const theme = dark ? themes.dark : themes.light;
+
+//   return (
+//     <ThemeContext.Provider value={{ theme, dark, selectTheme }}>
+//       {children}
+//     </ThemeContext.Provider>
+//   );
+// }
+
+// export { ThemeProvider, ThemeContext };
