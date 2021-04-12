@@ -14,14 +14,25 @@ const LanguageContext = createContext({
 export default LanguageContext;
 
 export function LanguageProvider(props) {
-  setToLocal("all-languages", languagesSchema.languages);
   const allLanguages =
     getFromLocal("all-languages") || languagesSchema.languages;
   setToLocal("all-languages", allLanguages);
 
   const [selectedLanguageName, setSelectedLanguageName] = useState(
-    getFromLocal("selected-language-name") || languagesSchema.defaultLanguage
+    getFromLocal("selected-language-name") ||
+      getWindowNavigatorLanguage(allLanguages) ||
+      languagesSchema.defaultLanguage
   );
+  setToLocal("selected-language-name", selectedLanguageName);
+
+  function getWindowNavigatorLanguage(languages) {
+    const windowNavigatorLanguage = window.navigator.language;
+    for (const languageName in languages) {
+      if (languages[languageName].for.includes(windowNavigatorLanguage)) {
+        return languageName;
+      }
+    }
+  }
 
   // useLayoutEffect(() => {
   //   const selectedLanguageName = getFromLocal("selected-language-name");

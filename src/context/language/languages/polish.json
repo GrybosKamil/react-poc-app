@@ -1,6 +1,10 @@
 {
     "id": "1",
     "name": "polish",
+    "for": [
+        "pl",
+        "polish"
+    ],
     "language": "Polski",
     "title": "Tytuł",
     "setThisLanguage": "Ustaw język 'Polski'",

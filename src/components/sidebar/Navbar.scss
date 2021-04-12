@@ -24,7 +24,8 @@
             border-left-color: lightsalmon;
             border-right-color: transparent;
 
-            transition: ease-out 0.5s;
+            transition: margin-left 1.5s ease-in, margin-right 1.5s ease-in, border-radius 1.5s linear,
+                border-color 1.5s ease-in-out;
 
             background-color: black;
             color: white;
@@ -37,6 +38,9 @@
                 border-radius: 0 50px 50px 0;
                 border-left-color: transparent;
                 border-right-color: limegreen;
+
+                transition: margin-left 1s ease-out, margin-right 1s ease-out, border-radius 1.5s linear,
+                    border-color 1.5s ease-in-out;
 
                 background-color: lightgrey;
                 color: green;

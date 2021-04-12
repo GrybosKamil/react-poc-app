@@ -1,6 +1,12 @@
 {
     "id": "0",
     "name": "english",
+    "for": [
+        "en",
+        "en-GB",
+        "en-US",
+        "english"
+    ],
     "language": "English",
     "title": "Title",
     "setThisLanguage": "Set 'English' language",
