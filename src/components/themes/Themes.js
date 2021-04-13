@@ -1,5 +1,7 @@
-import { useContext } from "react";
+import { useEffect, useContext, useRef, createRef } from "react";
 import { Button } from "react-bootstrap";
+
+import VanillaTilt from "vanilla-tilt";
 
 import ThemeContext from "../../context/theme/ThemeContext";
 import LanguageContext from "../../context/language/LanguageContext";
@@ -16,14 +18,44 @@ const Themes = () => {
 
   const widthOfThemeButton = (1 / themes.length) * 100 + "%";
 
+  const tilts = useRef([]);
+  tilts.current = themes.map((_, i) => tilts.current[i] ?? createRef(null));
+
+  useEffect(() => {
+    const options = {
+      scale: 1.1,
+      speed: 5000,
+      max: 20,
+      perspective: 600,
+      reverse: true,
+      glare: true,
+      maxGlare: 0.5,
+    };
+
+    const vanillaTilts = [];
+    for (const tiltRef of tilts.current) {
+      vanillaTilts.push(new VanillaTilt(tiltRef.current, options));
+    }
+
+    return () => {
+      for (const vanillaTilt of vanillaTilts) {
+        vanillaTilt.destroy();
+      }
+    };
+  }, []);
+
   return (
     <div>
       <div>Themes</div>
 
-      {themes.map((theme) => (
-        <span
+      {themes.map((theme, i) => (
+        <div
           key={theme.id}
-          style={{ width: widthOfThemeButton, display: "inline-block" }}
+          style={{
+            width: widthOfThemeButton,
+            display: "inline-block",
+            padding: "15px",
+          }}
         >
           {theme.name === selectedTheme.name && (
             <div
@@ -37,6 +69,7 @@ const Themes = () => {
           )}
 
           <Button
+            ref={tilts.current[i]}
             style={{
               backgroundColor: theme.colors.background,
               color: theme.colors.text,
@@ -47,7 +80,7 @@ const Themes = () => {
           >
             {selectedLanguage.themes.useTheme[theme.name]}
           </Button>
-        </span>
+        </div>
       ))}
     </div>
   );
