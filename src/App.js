@@ -7,7 +7,7 @@ import PageContentContainer from "./components/pageContent/PageContentContainer"
 
 import "./App.scss";
 
-function App() {
+const App = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
@@ -21,6 +21,6 @@ function App() {
       </LanguageProvider>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

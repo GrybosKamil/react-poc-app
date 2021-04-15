@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import './index.scss';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import "./index.scss";
+import App from "./App";
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <StrictMode>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+    </HashRouter>
+  </StrictMode>,
+  document.getElementById("root")
 );
