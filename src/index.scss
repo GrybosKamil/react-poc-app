@@ -10,14 +10,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   font-family: "Courier New", Courier, monospace;
-  
-  height: 100%;
-}
 
-#root {
   height: 100%;
 }
 
 a {
   -webkit-user-drag: none;
+}
+
+#root {
+  height: 100%;
 }
