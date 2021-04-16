@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 
 import ThemeContext from "../../context/theme/ThemeContext";
 import LanguageContext from "../../context/language/LanguageContext";
@@ -38,6 +38,8 @@ const Navbar = () => {
     },
   ];
 
+  const navbarTheme = selectedTheme.theme.sidebar.navbar;
+
   return (
     <div className="sidebar-links-container">
       <ul className="sidebar-links">
@@ -50,8 +52,9 @@ const Navbar = () => {
                 className={"sidebar-link " + link.text}
                 activeClassName="active-link"
                 style={{
-                  backgroundColor: selectedTheme.colors.background,
-                  color: selectedTheme.colors.text,
+                  textTransform: navbarTheme.textTransform,
+                  backgroundColor: navbarTheme.backgroundColor,
+                  color: navbarTheme.textColor,
                 }}
               >
                 {selectedLanguage.sidebar[link.text]}

@@ -4,13 +4,13 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./index.scss";
-import App from "./App";
+import AppContainer from "./AppContainer";
 import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <StrictMode>
     <HashRouter>
-      <App />
+      <AppContainer />
     </HashRouter>
   </StrictMode>,
   document.getElementById("root")

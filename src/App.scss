@@ -4,21 +4,17 @@
   height: 100%;
   min-height: 100%;
 
-  background-color: grey;
-
   .site-content {
     display: flex;
     flex-direction: column;
     height: 100%;
     min-height: 100%;
-    
 
     .footer,
     .header {
       padding: 20px;
-      
+
       text-align: center;
-      background-color: lightblue;
     }
   }
 }

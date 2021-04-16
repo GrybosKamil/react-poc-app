@@ -4,24 +4,70 @@
         "light": {
             "id": "T_001",
             "name": "light",
-            "colors": {
-                "background": "#FFFFFF",
-                "text": "#000000",
-                "buttons": {
-                    "background": "#AAAAAA",
-                    "text": "#0000FF"
+            "theme": {
+                "backgroundColor": "#EFEFEF",
+                "textColor": "#101010",
+                "sidebar": {
+                    "backgroundColor": "lightblue",
+                    "textColor": "blue",
+                    "navbar": {
+                        "backgroundColor": "lightgrey",
+                        "textColor": "#654321",
+                        "textTransform": "uppercase"
+                    }
+                },
+                "pageContent": {
+                    "backgroundColor": "lightgrey",
+                    "textColor": "#121232",
+                    "themes": {
+                        "activeTheme": {
+                            "backgroundColor": "red",
+                            "borderColor": "lightgreen",
+                            "textColor": "white"
+                        }
+                    },
+                    "languages": {
+                        "activeLanguage": {
+                            "backgroundColor": "red",
+                            "borderColor": "lightgreen",
+                            "textColor": "white"
+                        }
+                    }
                 }
             }
         },
         "dark": {
             "id": "T_002",
             "name": "dark",
-            "colors": {
-                "background": "#000000",
-                "text": "#FFFFFF",
-                "buttons": {
-                    "background": "#777777",
-                    "text": "#0000FF"
+            "theme": {
+                "backgroundColor": "#202020",
+                "textColor": "#EFEFEF",
+                "sidebar": {
+                    "backgroundColor": "blue",
+                    "textColor": "lightblue",
+                    "navbar": {
+                        "backgroundColor": "lightgrey",
+                        "textColor": "#654321",
+                        "textTransform": "uppercase"
+                    }
+                },
+                "pageContent": {
+                    "backgroundColor": "lightgrey",
+                    "textColor": "#121232",
+                    "themes": {
+                        "activeTheme": {
+                            "backgroundColor": "red",
+                            "borderColor": "lightgreen",
+                            "textColor": "white"
+                        }
+                    },
+                    "languages": {
+                        "activeLanguage": {
+                            "backgroundColor": "red",
+                            "borderColor": "lightgreen",
+                            "textColor": "white"
+                        }
+                    }
                 }
             }
         }

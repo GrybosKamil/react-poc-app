@@ -48,6 +48,8 @@ const Languages = () => {
 
   const languageNestedKeys = Object.keys(flatten(selectedLanguage));
 
+  const languagesTheme = selectedTheme.theme.pageContent.languages;
+
   return (
     <div>
       <div>{selectedLanguage.sidebar.languages}</div>
@@ -64,8 +66,11 @@ const Languages = () => {
           {language.name === selectedLanguage.name && (
             <div
               style={{
-                border: "5px solid green",
+                backgroundColor: languagesTheme.activeLanguage.backgroundColor,
+                border: "5px solid",
                 borderRadius: "15px",
+                borderColor: languagesTheme.activeLanguage.borderColor,
+                color: languagesTheme.activeLanguage.textColor,
               }}
             >
               Active
@@ -75,8 +80,8 @@ const Languages = () => {
           <Button
             ref={tilts.current[i]}
             style={{
-              backgroundColor: selectedTheme.colors.background,
-              color: selectedTheme.colors.text,
+              backgroundColor: languagesTheme.backgroundColor,
+              color: languagesTheme.textColor,
               width: "100%",
             }}
             active={language.name === selectedLanguage.name}

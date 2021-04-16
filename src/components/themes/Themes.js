@@ -46,7 +46,9 @@ const Themes = () => {
     };
   }, []);
 
-  const themeNestedKeys = Object.keys(flatten(selectedTheme.colors));
+  const themeNestedKeys = Object.keys(flatten(selectedTheme.theme));
+
+  const themesTheme = selectedTheme.theme.pageContent.themes;
 
   return (
     <div>
@@ -65,6 +67,8 @@ const Themes = () => {
               style={{
                 border: "5px solid green",
                 borderRadius: "15px",
+                borderColor: themesTheme.activeTheme.borderColor,
+                color: themesTheme.activeTheme.textColor,
               }}
             >
               Active
@@ -74,8 +78,8 @@ const Themes = () => {
           <Button
             ref={tilts.current[i]}
             style={{
-              backgroundColor: theme.colors.background,
-              color: theme.colors.text,
+              backgroundColor: theme.theme.backgroundColor,
+              color: theme.theme.textColor,
               width: "100%",
             }}
             active={theme.name === selectedTheme.name}
@@ -103,7 +107,7 @@ const Themes = () => {
             {themeNestedKeys.map((elem) => (
               <tr key={elem}>
                 <td>{elem}</td>
-                <td>{lodash.get(selectedTheme.colors, elem)}</td>
+                <td>{lodash.get(selectedTheme.theme, elem)}</td>
               </tr>
             ))}
           </tbody>
