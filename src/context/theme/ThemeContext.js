@@ -1,8 +1,7 @@
 import { useState, createContext } from "react";
 // import { useState, useEffect, useLayoutEffect, createContext } from "react";
 
-// import { getFromLocal, setToLocal } from "../../utils/storage";
-import { setToLocal } from "../../utils/storage";
+import { getFromLocal, setToLocal } from "../../utils/storage";
 
 import * as themesSchema from "./themes.json";
 
@@ -16,17 +15,11 @@ const ThemeContext = createContext({
 export default ThemeContext;
 
 export function ThemeProvider(props) {
-  // const allThemes = getFromLocal("all-themes") || themesSchema.default.themes;
-  // setToLocal("all-themes", allThemes);
-  // const [selectedThemeName, setSelectedThemeName] = useState(
-  // getFromLocal("selected-theme-name") || themesSchema.default.defaultThemeName
-  // );
-  // setToLocal("selected-theme-name", selectedThemeName);
-  const allThemes = themesSchema.default.themes;
+  const allThemes = getFromLocal("all-themes") || themesSchema.default.themes;
   setToLocal("all-themes", allThemes);
 
   const [selectedThemeName, setSelectedThemeName] = useState(
-    themesSchema.default.defaultThemeName
+    getFromLocal("selected-theme-name") || themesSchema.default.defaultThemeName
   );
   setToLocal("selected-theme-name", selectedThemeName);
 
