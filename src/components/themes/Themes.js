@@ -52,7 +52,9 @@ const Themes = () => {
 
   return (
     <div>
-      <div>Themes</div>
+      <div style={{ color: selectedTheme.theme.pageContent.textColor }}>
+        Themes
+      </div>
       {themes.map((theme, i) => (
         <div
           key={theme.id}
@@ -96,7 +98,9 @@ const Themes = () => {
           justifyContent: "center",
         }}
       >
-        <table>
+        <table
+          style={{ color: selectedTheme.theme.pageContent.themes.textColor }}
+        >
           <thead>
             <tr>
               <th>Elem ID</th>

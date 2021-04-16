@@ -15,7 +15,8 @@ const ThemeContext = createContext({
 export default ThemeContext;
 
 export function ThemeProvider(props) {
-  const allThemes = getFromLocal("all-themes") || themesSchema.default.themes;
+  // const allThemes = getFromLocal("all-themes") || themesSchema.default.themes;
+  const allThemes = themesSchema.default.themes;
   setToLocal("all-themes", allThemes);
 
   const [selectedThemeName, setSelectedThemeName] = useState(

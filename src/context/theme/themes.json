@@ -8,18 +8,19 @@
                 "backgroundColor": "#EFEFEF",
                 "textColor": "#101010",
                 "sidebar": {
-                    "backgroundColor": "lightblue",
-                    "textColor": "blue",
+                    "backgroundColor": "lightgrey",
+                    "textColor": "black",
                     "navbar": {
                         "backgroundColor": "lightgrey",
-                        "textColor": "#654321",
+                        "textColor": "black",
                         "textTransform": "uppercase"
                     }
                 },
                 "pageContent": {
                     "backgroundColor": "lightgrey",
-                    "textColor": "#121232",
+                    "textColor": "black",
                     "themes": {
+                        "textColor": "blue",
                         "activeTheme": {
                             "backgroundColor": "red",
                             "borderColor": "lightgreen",
@@ -43,18 +44,19 @@
                 "backgroundColor": "#202020",
                 "textColor": "#EFEFEF",
                 "sidebar": {
-                    "backgroundColor": "blue",
-                    "textColor": "lightblue",
+                    "backgroundColor": "#181818",
+                    "textColor": "white",
                     "navbar": {
-                        "backgroundColor": "lightgrey",
-                        "textColor": "#654321",
+                        "backgroundColor": "#181818",
+                        "textColor": "white",
                         "textTransform": "uppercase"
                     }
                 },
                 "pageContent": {
-                    "backgroundColor": "lightgrey",
-                    "textColor": "#121232",
+                    "backgroundColor": "#181818",
+                    "textColor": "white",
                     "themes": {
+                        "textColor": "red",
                         "activeTheme": {
                             "backgroundColor": "red",
                             "borderColor": "lightgreen",
