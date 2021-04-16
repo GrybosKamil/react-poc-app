@@ -1,7 +1,9 @@
 import { useEffect, useContext, useRef, createRef } from "react";
 import { Button } from "react-bootstrap";
 
+import lodash from "lodash";
 import VanillaTilt from "vanilla-tilt";
+import { flatten } from "flat";
 
 import ThemeContext from "../../context/theme/ThemeContext";
 import LanguageContext from "../../context/language/LanguageContext";
@@ -44,6 +46,8 @@ const Languages = () => {
     };
   }, []);
 
+  const languageNestedKeys = Object.keys(flatten(selectedLanguage));
+
   return (
     <div>
       <div>{selectedLanguage.sidebar.languages}</div>
@@ -82,6 +86,30 @@ const Languages = () => {
           </Button>
         </div>
       ))}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>Elem ID</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {languageNestedKeys.map((elem) => (
+              <tr key={elem}>
+                <td>{elem}</td>
+                <td>{lodash.get(selectedLanguage, elem)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
