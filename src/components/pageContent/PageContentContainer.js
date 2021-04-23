@@ -1,6 +1,6 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 
-import ThemeContext from "../../context/theme/ThemeContext";
+// import ThemeContext from "../../context/theme/ThemeContext";
 
 import Sidebar from "../sidebar/Sidebar";
 import PageContent from "./PageContent";
@@ -8,7 +8,7 @@ import PageContent from "./PageContent";
 import "./PageContentContainer.scss";
 
 const PageContentContainer = () => {
-  const { selectedTheme } = useContext(ThemeContext);
+  // const { selectedTheme } = useContext(ThemeContext);
 
   return (
     <div className="page-content-container container">
