@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-poc-app/static/css/main.8a3977c5.chunk.css",
-    "main.js": "/react-poc-app/static/js/main.1ce7901f.chunk.js",
-    "main.js.map": "/react-poc-app/static/js/main.1ce7901f.chunk.js.map",
+    "main.css": "/react-poc-app/static/css/main.8b33b2f0.chunk.css",
+    "main.js": "/react-poc-app/static/js/main.3b2ef825.chunk.js",
+    "main.js.map": "/react-poc-app/static/js/main.3b2ef825.chunk.js.map",
     "runtime-main.js": "/react-poc-app/static/js/runtime-main.0be27e2f.js",
     "runtime-main.js.map": "/react-poc-app/static/js/runtime-main.0be27e2f.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/react-poc-app/static/css/2.4c97ca4f.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.616cf01f.chunk.js.map": "/react-poc-app/static/js/2.616cf01f.chunk.js.map",
     "index.html": "/react-poc-app/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/react-poc-app/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.8a3977c5.chunk.css.map": "/react-poc-app/static/css/main.8a3977c5.chunk.css.map",
+    "static/css/main.8b33b2f0.chunk.css.map": "/react-poc-app/static/css/main.8b33b2f0.chunk.css.map",
     "static/js/2.616cf01f.chunk.js.LICENSE.txt": "/react-poc-app/static/js/2.616cf01f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0be27e2f.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.616cf01f.chunk.js",
-    "static/css/main.8a3977c5.chunk.css",
-    "static/js/main.1ce7901f.chunk.js"
+    "static/css/main.8b33b2f0.chunk.css",
+    "static/js/main.3b2ef825.chunk.js"
   ]
 }
